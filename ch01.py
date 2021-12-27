@@ -45,3 +45,33 @@ print(f"Length of text3: {len(text3)}")
 sortedSet = sorted(set(text3));
 print(f"Sorted set text3: {sortedSet}")
 print(f"Sorted set length of text3: {len(sortedSet)}")
+
+print(f"Sorted set: {type(sortedSet)}")
+print(f"text3: {type(text3)}")
+
+# python slicing
+myarray = ['only', 'through', 'me', 'can', 'you', 'come', 'to', 'the', 'father']
+
+print(myarray[1:4]) # upper bound exclusive
+print(myarray[-2:]) # the father
+
+fdt2 = FreqDist(text2)
+print(fdt2)
+print(fdt2.most_common(50))
+print(fdt2['Marianne'])
+
+fdt2.plot(50, cumulative=True)
+
+print(fdt2.hapaxes()) # single instance words ie unique
+vocab = set(text2)
+longWords = [w for w in vocab if(len(w)) >  15]
+print(sorted(longWords))
+
+# longer frequent words
+header('Longer frequent words')
+fdist5 = FreqDist(text5)
+ft5 = sorted(w for w in set(text5) if(len(w) > 7 and fdist5[w] > 7))
+print(ft5)
+
+# Collocations
+# 
