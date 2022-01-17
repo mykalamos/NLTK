@@ -74,4 +74,7 @@ ft5 = sorted(w for w in set(text5) if(len(w) > 7 and fdist5[w] > 7))
 print(ft5)
 
 # Collocations
-# 
+# Sequence occuring together. Resistant to substition with similes
+# e.g. maroon wine
+
+list()
